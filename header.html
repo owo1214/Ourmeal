@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>header</title>
+<!-- 제이쿼리 불러오기 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<!--아이콘-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Slick 불러오기 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    header {
+        position: relative;
+        width: 1280px;
+        margin: auto;
+    }
+
+    .header_banner {
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+    }
+    .header_banner_link{
+        display: block;
+        width: 50px;
+    }
+    .header_banner_close {
+        position: absolute;
+        top: 15px;
+        margin-left: 630px;
+     
+    
+        
+    }
+
+
+    #logo {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .head_login {
+        text-align: right;
+    }
+
+    .head_login li {
+        display: inline-block;
+        padding-right: 7px;
+        border-right: solid 1px lightgray;
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+    .head_login li:last-child {
+        border-right: none;
+    }
+
+    #my_page {
+        position: absolute;
+        top: 265px;
+        right: 20px;
+    }
+
+    #my_page li {
+        display: inline-block;
+        padding-left: 20px;
+    }
+
+    nav {
+        text-align: left;
+        font-size: 20px;
+        padding: 60px 0px 30px 0;
+    }
+
+    nav li {
+        display: inline-block;
+        font-size: 17px;
+        margin: 0 10px 0 10px;
+
+    }
+
+    nav li:first-child {
+        padding-right: 10px;
+        border-right: solid 1px lightgray;
+    }
+
+
+    nav li:hover {
+        color: coral;
+    }
+
+    
+
+    .searchbox {
+        position: absolute;
+        top: 70px;
+        text-align: center;
+        width: 200px;
+        margin: 0 auto;
+
+    }
+
+    input {
+        width: 100%;
+        border-radius: 20px;
+        border: solid 1px lightgray;
+        background-color: lightgray;
+        padding: 10px 12px;
+        outline: none;
+        float: left;
+
+    }
+
+    button {
+        position: absolute;
+        right: -40px;
+        top: 3px;
+        margin: 0;
+        float: right;
+    }
+
+    main{
+        margin-bottom: 60px;
+    }
+    /*링크 색상*/
+    a {text-decoration-line: none;}
+    a:visited { color:black;}
+    a:hover { color:coral;}
+
+</style>
+</head>
+
+<body>
+<div id="header">
+<!--상단 배너-->
+<div class="header_banner">
+    <div onclick="location.href='#';" style="cursor:pointer;"></div>
+    <img src="img/headerBanner.png" alt="신규가입 권유배너">
+    <a href="#none" class="header_banner_close"><img src="img/icon_close.png" width="40px" alt="배너 닫기"></a>
+    <script>
+    var bannerFunc = function(){
+        $('.header_banner_close').bind("click", function(){
+            $('.header_banner').animate({height: 0}, 500);
+        });
+    };
+    $(function($){
+        bannerFunc();
+    });
+</script>
+</div>
+
+
+
+<header>
+    <!-- 로그인, 회원가입, 고객센터 상단 메뉴-->
+    <div class="head_login">
+        <ul>
+            <li>
+                <div onclick="location.href='#';" style="cursor:pointer;">로그인</div>
+            </li>
+            <li>
+                <div onclick="location.href='#';" style="cursor:pointer;">회원가입</div>
+            </li>
+            <li>
+                <div onclick="location.href='#';" style="cursor:pointer;">고객센터</div>
+            </li>
+        </ul>
+    </div>
+
+
+
+
+    <!-- 검색창 -->
+
+    <div class="searchbox">
+        <form>
+            <input type="text" autocomplete="off" placeholder="이제, 장보기는 더반찬&" data-typing="off" data-keword-url="#">
+            <button type="submit"><i class="fas fa-search fa-2x"></i></button>
+        </form>
+    </div>
+
+    <!-- 로고-->
+    <div id="logo">
+        <a href="index.html"><img src="img/logo1.png" style="width: 300px;"></a>
+    </div>
+
+    <nav>
+        <ul>
+            <li>
+                <div onclick="location.href='#';" style="cursor:pointer;">카테고리</div>
+            </li>
+
+
+            <li>
+                <div onclick="location.href='#';" style="cursor:pointer;"><a href="sale_item.html">할인특가</a></div>
+            </li>
+            <li>
+                <div onclick="location.href='#';" style="cursor:pointer;"><a href="new_product.html">신상품</a></div>
+            </li>
+            <li>
+                <div onclick="location.href='#';" style="cursor:pointer;"><a href="best_item.html">베스트</a></div>
+            </li>
+        </ul>
+    </nav>
+
+    
+    <!-- 마이페이지-->
+
+    <div id="my_page">
+        <ul>
+            <li>
+                <div onclick="location.href='#';" style="cursor:pointer;">마이더반찬</div>
+            </li>
+            <li>
+                <div onclick="location.href='#';" style="cursor:pointer;"><a href="cart.html">장바구니</a></div>
+            </li>
+        </ul>
+    </div>
+
+</header>
+
+
+
+</body>
+</html>
